@@ -9,8 +9,10 @@ export const contact = {
    * While empty, Facebook links fall back to facebook.com and are left out of structured data.
    */
   facebookUrl: "",
+  serviceArea: "San Jose, California and the surrounding areas",
+  serviceAreaShort: "San Jose, CA",
   description:
-    "Professional vehicle cleaning and auto detailing. Basic cleaning, mini detailing, and full detailing packages for cars, SUVs, and trucks.",
+    "Professional vehicle cleaning and auto detailing in San Jose, California and the surrounding areas. Basic cleaning, mini detailing, and full detailing packages for cars, SUVs, and trucks.",
 } as const;
 
 export const facebookHref = contact.facebookUrl || "https://www.facebook.com/";

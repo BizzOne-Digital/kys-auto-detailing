@@ -3,7 +3,7 @@ import { services } from "@/lib/data/services";
 
 /**
  * AutoWash (a schema.org AutomotiveBusiness) with known facts only.
- * No address, hours, coordinates or ratings: the client has not provided them.
+ * Service area only (no street address), as provided by the client. No hours, coordinates or ratings: the client has not provided them.
  */
 export function StructuredData() {
   const data = {
@@ -14,6 +14,10 @@ export function StructuredData() {
     url: siteUrl,
     telephone: "+1-408-797-4569",
     email: contact.email,
+    areaServed: [
+      { "@type": "City", name: "San Jose", containedInPlace: { "@type": "State", name: "California" } },
+      { "@type": "Place", name: contact.serviceArea },
+    ],
     ...(contact.facebookUrl ? { sameAs: [contact.facebookUrl] } : {}),
     hasOfferCatalog: {
       "@type": "OfferCatalog",

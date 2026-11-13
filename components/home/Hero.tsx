@@ -41,7 +41,7 @@ export function Hero() {
           <Reveal>
             <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.45em] text-brand sm:text-sm">
               <span aria-hidden className="h-px w-10 bg-brand" />
-              Professional Car Care
+              Professional Car Care · San Jose, CA
             </p>
           </Reveal>
           <Reveal delay={0.1}>

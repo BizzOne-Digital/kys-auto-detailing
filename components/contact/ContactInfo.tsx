@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { IconBadge } from "@/components/ui/IconBadge";
 import { FacebookIcon } from "@/components/ui/Icons";
 import { contact, facebookHref } from "@/lib/data/contact";
@@ -11,7 +11,18 @@ const cards = [
 
 export function ContactInfo() {
   return (
-    <ul className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+      <li>
+        <div className="flex h-full items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 text-white backdrop-blur">
+          <IconBadge>
+            <MapPin />
+          </IconBadge>
+          <span className="min-w-0 flex-1">
+            <span className="block font-display text-xl font-bold">Service Area</span>
+            <span className="block break-words text-sm text-slate-300">{contact.serviceArea}</span>
+          </span>
+        </div>
+      </li>
       {cards.map((c) => (
         <li key={c.title}>
           <a

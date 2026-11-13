@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { GlowButton } from "@/components/ui/GlowButton";
@@ -54,6 +54,10 @@ export function Footer() {
         <div className="lg:col-span-3">
           <h2 className="font-display text-lg font-bold uppercase tracking-wider text-white">Contact</h2>
           <ul className="mt-5 space-y-4">
+            <li className="flex items-start gap-3 text-slate-300">
+              <MapPin aria-hidden className="mt-0.5 size-4 shrink-0 text-brand" />
+              <span>Serving {contact.serviceArea}</span>
+            </li>
             <li>
               <a href={contact.phoneHref} className={`${linkCls} inline-flex items-center gap-3`}>
                 <Phone aria-hidden className="size-4 text-brand" />
