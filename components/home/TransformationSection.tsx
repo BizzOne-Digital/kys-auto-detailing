@@ -1,9 +1,11 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { Reveal } from "@/components/motion/Reveal";
-import { BeforeAfterSlider } from "./BeforeAfterSlider";
-import { images } from "@/lib/data/images";
+import { VideoCard } from "./VideoCard";
+import { detailVideos } from "@/lib/data/videos";
 
+/** Real client before/after detailing videos. Swipeable row on mobile, grid on desktop. */
 export function TransformationSection() {
   return (
     <section aria-labelledby="difference-title" className="relative overflow-hidden bg-surface py-24 sm:py-28">
@@ -11,15 +13,31 @@ export function TransformationSection() {
       <Container className="relative">
         <Reveal>
           <SectionHeading
-            eyebrow="The Transformation"
+            eyebrow="Real Results"
             title={<span id="difference-title">See the Difference</span>}
-            description="Drag the slider to compare a dull, neglected finish with a freshly detailed one."
+            description="Real interior detailing work by KVS Auto Detailing. Tap any video to watch."
           />
         </Reveal>
-        <Reveal delay={0.1} className="mx-auto mt-14 max-w-5xl">
-          <BeforeAfterSlider src={images.garageNight.src} alt={images.garageNight.alt} />
-          <p className="mt-4 text-center text-sm text-muted">Illustrative comparison. Results vary by vehicle condition.</p>
-        </Reveal>
+      </Container>
+
+      <Reveal delay={0.1} className="relative mt-14">
+        <ul
+          aria-label="Detailing videos"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:thin] sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:px-8 lg:pb-0"
+        >
+          {detailVideos.map((video, i) => (
+            <li key={video.src} className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[42vw] lg:w-auto lg:max-w-none">
+              <VideoCard video={video} index={i} />
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-center text-sm text-muted lg:hidden">Swipe to see more</p>
+      </Reveal>
+
+      <Container className="relative mt-12 text-center">
+        <PrimaryButton href="/booking" arrow>
+          Get Results Like These
+        </PrimaryButton>
       </Container>
     </section>
   );
