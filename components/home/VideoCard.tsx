@@ -54,7 +54,7 @@ export function VideoCard({ video, index }: { video: DetailVideo; index: number 
           <span className="flex size-16 items-center justify-center self-center rounded-full border-2 border-brand bg-navy-950/60 text-brand shadow-glow backdrop-blur transition-transform duration-300 group-hover:scale-110">
             <Play aria-hidden className="ml-1 size-7 fill-current" />
           </span>
-          <span className="text-sm font-medium leading-snug text-white">{video.title.replace("Interior detail walkthrough: ", "")}</span>
+          <span className="text-sm font-medium leading-snug text-white">{video.title.replace("Finished interior: ", "")}</span>
         </button>
       )}
     </figure>

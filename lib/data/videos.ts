@@ -17,13 +17,9 @@ const v = (n: string, title: string, orientation: DetailVideo["orientation"] = "
   orientation,
 });
 
+/** Only finished ("after") results are shown. Before-clips 03, 05, 07, 08 and unclear 01 are kept in /public/videos for future before/after pairs. */
 export const detailVideos: DetailVideo[] = [
-  v("01", "Interior detail walkthrough: seats, console and floor"),
-  v("02", "Interior detail walkthrough: door panels and carpets"),
-  v("03", "Interior detail walkthrough: floor mats and leather seats"),
-  v("04", "Interior detail walkthrough: front cabin and door trim"),
-  v("05", "Interior detail walkthrough: SUV cabin and cargo area"),
-  v("06", "Interior detail walkthrough: seats, cargo area and dashboard"),
-  v("07", "Interior detail walkthrough: leather seat cleaning", "landscape"),
-  v("08", "Interior detail walkthrough: seats, door and dashboard"),
+  v("02", "Finished interior: door panels and carpets"),
+  v("04", "Finished interior: front cabin and door trim"),
+  v("06", "Finished interior: seats, cargo area and dashboard"),
 ];

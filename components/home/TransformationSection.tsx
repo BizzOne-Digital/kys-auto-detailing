@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { VideoCard } from "./VideoCard";
 import { detailVideos } from "@/lib/data/videos";
 
-/** Real client before/after detailing videos. Swipeable row on mobile, grid on desktop. */
+/** Real finished-result detailing videos. Swipeable row on mobile, grid on desktop. */
 export function TransformationSection() {
   return (
     <section aria-labelledby="difference-title" className="relative overflow-hidden bg-surface py-24 sm:py-28">
@@ -23,7 +23,7 @@ export function TransformationSection() {
       <Reveal delay={0.1} className="relative mt-14">
         <ul
           aria-label="Detailing videos"
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:thin] sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:px-8 lg:pb-0"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:thin] sm:px-6 lg:mx-auto lg:grid lg:max-w-5xl lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-8 lg:pb-0"
         >
           {detailVideos.map((video, i) => (
             <li key={video.src} className="w-[68vw] max-w-[280px] shrink-0 snap-center sm:w-[42vw] lg:w-auto lg:max-w-none">
