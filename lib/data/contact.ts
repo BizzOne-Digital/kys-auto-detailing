@@ -2,8 +2,8 @@ export const contact = {
   businessName: "KVS Auto Detailing",
   phone: "408-797-4569",
   phoneHref: "tel:+14087974569",
-  email: "sebastianmirandapool@gmail.com",
-  emailHref: "mailto:sebastianmirandapool@gmail.com",
+  email: "kvsautodetailing@gmail.com",
+  emailHref: "mailto:kvsautodetailing@gmail.com",
   /**
    * Replace with the client's real Facebook page URL before launch.
    * While empty, Facebook links fall back to facebook.com and are left out of structured data.
