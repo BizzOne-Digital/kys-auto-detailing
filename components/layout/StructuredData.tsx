@@ -16,7 +16,6 @@ export function StructuredData() {
     email: contact.email,
     areaServed: [
       { "@type": "City", name: "San Jose", containedInPlace: { "@type": "State", name: "California" } },
-      { "@type": "Place", name: contact.serviceArea },
     ],
     ...(contact.facebookUrl ? { sameAs: [contact.facebookUrl] } : {}),
     hasOfferCatalog: {

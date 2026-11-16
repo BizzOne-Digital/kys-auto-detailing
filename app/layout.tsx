@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     template: "%s | KVS Auto Detailing",
   },
   description:
-    "Professional vehicle cleaning and auto detailing in San Jose, California and the surrounding areas. Choose from basic cleaning, mini detailing, and full detailing packages.",
+    "Professional vehicle cleaning and auto detailing in San José, CA. Choose from basic cleaning, mini detailing, and full detailing packages.",
   applicationName: "KVS Auto Detailing",
   openGraph: {
     type: "website",
     siteName: "KVS Auto Detailing",
     title: "KVS Auto Detailing | Car Detailing in San Jose, CA",
     description:
-      "Professional vehicle cleaning and auto detailing in San Jose, CA and nearby areas. Basic cleaning, mini detailing, and full detailing packages.",
+      "Professional vehicle cleaning and auto detailing in San José, CA. Basic cleaning, mini detailing, and full detailing packages.",
   },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/icon.svg" },

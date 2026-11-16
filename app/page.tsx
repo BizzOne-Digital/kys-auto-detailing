@@ -10,7 +10,7 @@ import { BookingCTA } from "@/components/home/BookingCTA";
 export const metadata: Metadata = {
   title: { absolute: "KVS Auto Detailing | Car Detailing in San Jose, CA" },
   description:
-    "Professional vehicle cleaning and auto detailing in San Jose, California and the surrounding areas. Choose from basic cleaning, mini detailing, and full detailing packages.",
+    "Professional vehicle cleaning and auto detailing in San José, CA. Choose from basic cleaning, mini detailing, and full detailing packages.",
   alternates: { canonical: "/" },
 };
 
